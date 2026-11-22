@@ -1,0 +1,48 @@
+
+# TASK 4: Basic Chatbot
+
+#responses
+def chatbot_response(message):
+
+    message = message.lower().strip()
+
+    if message == "hello":
+        return "Hi! Nice to meet you."
+
+    elif message == "how are you":
+        return "I'm fine, thanks! How are you?"
+
+    elif message == "what is your name":
+        return "I'm Python Bot!"
+
+    elif message == "what can you do":
+        return "I can chat with you using Python!"
+
+    elif message == "thank you":
+        return "You're welcome!"
+
+    elif message == "bye":
+        return "Goodbye! Have a nice day."
+
+    else:
+        return "Sorry, I don't understand that."
+
+#program
+print("================================")
+print("       PYTHON CHATBOT")
+print("================================")
+
+print("Type 'bye' to exit the chatbot.")
+
+while True:
+
+    user_message = input("\nYou: ")
+
+    response = chatbot_response(user_message)
+
+    print("Bot:", response)
+
+    if user_message.lower().strip() == "bye":
+        break
+
+print("\nChat ended!")
